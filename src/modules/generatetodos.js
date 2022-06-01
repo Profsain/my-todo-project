@@ -1,7 +1,6 @@
 const generateTodoList = (todo) => {
   const todoUl = document.querySelector('.todo-list');
   const liItems = document.createElement('li');
-  
   liItems.innerHTML = `
     <input id="${todo.id}" type="checkbox">
     <span>${todo.description}</span>
@@ -9,6 +8,6 @@ const generateTodoList = (todo) => {
   `;
 
   todoUl.append(liItems);
-}
+};
 
 export default generateTodoList;
