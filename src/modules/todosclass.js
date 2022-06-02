@@ -11,7 +11,7 @@ class Todos {
       this.todosArr = JSON.parse(localStorage.getItem('todoStore'));
     }
   }
-  
+
   // Add new todo 
   addNewTodo() {
     const newTodos = {
