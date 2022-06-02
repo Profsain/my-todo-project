@@ -12,19 +12,19 @@ const todoObj = new Todos();
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
-  if(input.value !== '') {
+  if (input.value !== '') {
     todoObj.addNewTodo();
     input.value = '';
     input.focus();
   }
 });
 
-//remove todo items
+// remove todo items
 todoUl.addEventListener('click', (event) => {
-  if(event.target.classList.contains('delete-todo')) {
+  if (event.target.classList.contains('delete-todo')) {
     const deleteButton = event.target;
     todoObj.deleteTodoItem(deleteButton);
-  } else if(event.target.classList.contains('editTodo')) {
+  } else if (event.target.classList.contains('editTodo')) {
     const todoLi = event.target;
     todoObj.editTodoItem(todoLi);
   }

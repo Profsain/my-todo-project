@@ -1,5 +1,5 @@
 const todoUl = document.querySelector('.todo-list');
-const renderTodoList = ({id, description, ischeck}) => {
+const renderTodoList = ({ id, description, ischeck }) => {
   const liItems = document.createElement('li');
   liItems.innerHTML = `
     <input id="${id}" type="checkbox">
