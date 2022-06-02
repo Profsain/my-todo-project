@@ -12,14 +12,14 @@ class Todos {
     }
   }
 
-  // Add new todo 
+  // Add new todo
   addNewTodo() {
     const newTodos = {
       id: Date.now(),
       description: input.value,
       isCheck: false,
     };
-
+    
     this.check();
     this.todosArr.push(newTodos);
     localStorage.setItem('todoStore', JSON.stringify(this.todosArr));
