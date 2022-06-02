@@ -1,5 +1,6 @@
 import renderTodoList from './rendertodolist.js';
 
+
 const input = document.querySelector('#new-todo');
 const showMessage = document.querySelector('.feedback');
 class Todos {
@@ -13,6 +14,11 @@ class Todos {
     }
   }
 
+  // set notification to empty string
+  setEmpty() {
+    return showMessage.innerText = '';
+  }
+
   // Add new todo
   addNewTodo() {
     const newTodos = {
@@ -24,10 +30,10 @@ class Todos {
     this.check();
     if (this.todosArr.some((todoItem) => todoItem.description === newTodos.description)) {
       showMessage.innerText = 'Task already exist';
-      setTimeout(() => {showMessage.innerText = '', 3000});
+      setTimeout(this.setEmpty, 3000);
     } else {
       showMessage.innerText = 'Task added Successfully';
-      setTimeout(() => {showMessage.innerText = '', 3000});
+      setTimeout(this.setEmpty, 3000);
       this.todosArr.push(newTodos);
       localStorage.setItem('todoStore', JSON.stringify(this.todosArr));
       renderTodoList(newTodos);
