@@ -1,6 +1,8 @@
 import renderTodoList from './rendertodolist.js';
 
+
 const input = document.querySelector('#new-todo');
+const showMessage = document.querySelector('.feedback');
 class Todos {
   // array to hold todos list
   todosArr = [];
@@ -16,20 +18,32 @@ class Todos {
   addNewTodo() {
     const newTodos = {
       id: Date.now(),
+      index: this.todosArr.length + 1,
       description: input.value,
       isCheck: false,
     };
     this.check();
-    this.todosArr.push(newTodos);
-    localStorage.setItem('todoStore', JSON.stringify(this.todosArr));
-    renderTodoList(newTodos);
+    if (this.todosArr.some((todoItem) => todoItem.description === newTodos.description)) {
+      showMessage.innerText = 'Task already exist';
+      setTimeout(() => showMessage.innerText = '', 3000);
+    } else {
+      showMessage.innerText = 'Task added Successfully';
+      setTimeout(() => showMessage.innerText = '', 3000);
+      this.todosArr.push(newTodos);
+      localStorage.setItem('todoStore', JSON.stringify(this.todosArr));
+      renderTodoList(newTodos);
+    }
   }
 
   // delete todos item
   deleteTodoItem(deleteButton) {
     const removedTodo = deleteButton.parentElement;
     const removedTodoItem = this.todosArr.filter((todo) => todo.id === Number(deleteButton.id));
+    // update todo index
     this.todosArr.splice(this.todosArr.indexOf(removedTodoItem[0]), 1);
+    this.todosArr.forEach((todoItem, i) => {
+      todoItem.index = i + 1;
+    });
     localStorage.setItem('todoStore', JSON.stringify(this.todosArr));
     // remove todo from node
     removedTodo.remove();
