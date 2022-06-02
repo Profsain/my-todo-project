@@ -19,7 +19,6 @@ class Todos {
       description: input.value,
       isCheck: false,
     };
-    
     this.check();
     this.todosArr.push(newTodos);
     localStorage.setItem('todoStore', JSON.stringify(this.todosArr));
