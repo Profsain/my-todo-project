@@ -1,6 +1,5 @@
 import renderTodoList from './rendertodolist.js';
 
-
 const input = document.querySelector('#new-todo');
 const showMessage = document.querySelector('.feedback');
 class Todos {
@@ -16,7 +15,7 @@ class Todos {
 
   // set notification to empty string
   setEmpty() {
-    return showMessage.innerText = '';
+    showMessage.innerText = '';
   }
 
   // Add new todo
