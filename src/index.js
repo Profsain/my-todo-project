@@ -35,7 +35,7 @@ todoUl.addEventListener('click', (event) => {
     todoObj.editTodoItem(todoLi);
   } else if (event.target.classList.contains('todoCheck')) {
     const todoCheckBox = event.target;
-    todoCompleted(todoCheckBox, todoObj.todosArr)
+    todoCompleted(todoCheckBox, todoObj.todosArr);
   }
 });
 clearAll.addEventListener('click', () => {

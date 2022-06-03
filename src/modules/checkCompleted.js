@@ -7,6 +7,6 @@ const checkCompletedTodo = (todoObjArr) => {
       liText.classList.add('completed');
     }
   });
-}
+};
 
 export default checkCompletedTodo;

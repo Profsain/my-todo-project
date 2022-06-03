@@ -1,4 +1,3 @@
-
 const todoUl = document.querySelector('.todo-list');
 
 const clearAllCompleted = (todoObjArr) => {
@@ -12,6 +11,6 @@ const clearAllCompleted = (todoObjArr) => {
     localStorage.setItem('todoStore', JSON.stringify(todoObjArr));
     todoUl.removeChild(todoUl.children[todo.index - 1]);
   });
-}
+};
 
 export default clearAllCompleted;
