@@ -15,7 +15,7 @@ class Todos {
 
   // set notification to empty string
   setEmpty() {
-    showMessage.innerText = '';
+    this.showMessage.innerText = '';
   }
 
   // Add new todo
