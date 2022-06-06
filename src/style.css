@@ -50,10 +50,18 @@ body {
 }
 
 .clear-all {
+  padding: 6px;
+  width: 200px;
   font-weight: 600;
   text-decoration: underline;
   font-size: 18px;
   text-align: center;
+}
+
+.clear-all:hover {
+  cursor: pointer;
+  background-color: #bdbdbd;
+  color: #ffff;
 }
 
 .completed {
