@@ -22,7 +22,6 @@ body {
 
 #new-todo {
   width: 540px;
-  max-width: 100%;
   padding: 8px;
   border: var(--border);
   border-radius: 4px;
@@ -65,5 +64,5 @@ body {
 
 .completed {
   text-decoration: line-through;
-  color: rgb(138, 0, 0);
+  color: var(--primary-color);
 }

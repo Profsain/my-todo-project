@@ -2,6 +2,7 @@ import renderTodoList from './rendertodolist.js';
 
 const input = document.querySelector('#new-todo');
 const showMessage = document.querySelector('.feedback');
+
 class Todos {
   // array to hold todos list
   todosArr = [];

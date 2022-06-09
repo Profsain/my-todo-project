@@ -38,14 +38,18 @@ todoUl.addEventListener('click', (event) => {
     todoCompleted(todoCheckBox, todoObj.todosArr);
   }
 });
+
 clearAll.addEventListener('click', () => {
   clearAllCompleted(todoObj.todosArr);
 });
+
 // render todos page onload
 todoObj.check();
 todoObj.todosArr.forEach(renderTodoList);
+
 window.onload = () => {
   checkCompletedTodo(todoObj.todosArr);
 };
+
 
 export default todoObj;

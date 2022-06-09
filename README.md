@@ -1,17 +1,20 @@
 
 # My Todo List Project
 
-> This is a project to demonstrate setting up of webpack in the development environment.
+In this project, I build a todo app with crud operation and using webpack.
 
 
 ## Built With
 
 - Webpack
 - Loadash
+- HTML
+- CSS
+- JavaScript
 
 ## Live Demo (if available)
 
-[Live Demo Link](#)
+[Live Demo Link](https://profsain.github.io/my-todo-project/)
 
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
