@@ -20,8 +20,6 @@
   },
   "homepage": "https://github.com/Profsain/webpack-boilerplate#readme",
   "devDependencies": {
-    "@babel/cli": "^7.17.10",
-    "@babel/core": "^7.18.2",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.1",
     "eslint": "^7.32.0",

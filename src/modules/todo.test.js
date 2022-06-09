@@ -1,6 +1,5 @@
-
-import todoObj from '../index.js';
-
+const todoObj = require('../index');
+console.log(todoObj)
 test('add new todo test', () => {
   const task = {
     id: Date.now(),
